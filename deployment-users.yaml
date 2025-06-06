@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-k8-users
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-k8-users
+  template:
+    metadata:
+      labels:
+        app: msvc-k8-users
+    spec:
+      containers:
+      - image: luisenriquesm/msvc-k8-users:v1
+        name: msvc-k8-users
+        ports:
+        - containerPort: 8001
