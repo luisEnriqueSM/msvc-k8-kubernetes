@@ -1,1 +1,59 @@
-# msvc-k8-kubernetes
+
+# Comandos para crear los deployments en Kubernetes
+
+
+
+## Microservicio: mysql8
+
+### Forma declarativa
+
+### Comando para generar el deployment declarativo en un archivo sin crear el recurso en el Cluster de Kubernetes
+```bash
+kubectl create deployment mysql8 --image=mysql:8.0.42 --port=3306 --dry-run=client -o yaml > deployment-mysql.yaml
+```
+### Ejecutar el deployment de forma declarativa al llamar el archivo:
+```bash
+kubectl apply -f deployment-mysql.yaml
+```
+
+### Forma imperativa
+
+### Crear deployment
+```bash
+kubectl create deployment mysql8 --image=mysql:8.0.42 --port=3306
+```
+
+### Crear service exponiendo su puerto
+```bash
+kubectl expose deployment mysql8 --port=3306 --type=ClusterIP
+```
+
+## Microservicio: msvc-k8-users
+
+### Forma declarativa
+```bash
+kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v1 --port=8001 --dry-run=client -o yaml > deployment-users.yaml
+```
+
+### Ejecutar el deployment de forma declarativa al llamar el archivo:
+```bash
+kubectl apply -f deployment-users.yaml
+```
+
+
+## Forma imperativa
+
+### Crear deployment
+```bash
+kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v1 --port=8001
+```
+
+### Crear service exponiendo su puerto
+```bash
+kubectl expose deployment msvc-k8-users --port=8001 --type=LoadBalancer
+```
+
+### Exponer service
+```bash
+minikube service msvc-k8-users --url
+```
