@@ -32,7 +32,7 @@ kubectl expose deployment mysql8 --port=3306 --type=ClusterIP
 
 ### Forma declarativa
 ```bash
-kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v1 --port=8001 --dry-run=client -o yaml > deployment-users.yaml
+kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v4 --port=8001 --dry-run=client -o yaml > deployment-users.yaml
 ```
 
 ### Ejecutar el deployment de forma declarativa al llamar el archivo:
@@ -45,7 +45,7 @@ kubectl apply -f deployment-users.yaml
 
 ### Crear deployment
 ```bash
-kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v1 --port=8001
+kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v4 --port=8001
 ```
 
 ### Crear service exponiendo su puerto

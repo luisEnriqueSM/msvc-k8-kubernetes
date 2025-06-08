@@ -13,7 +13,7 @@ spec:
         app: msvc-k8-users
     spec:
       containers:
-      - image: luisenriquesm/msvc-k8-users:v1
+      - image: luisenriquesm/msvc-k8-users:v4
         name: msvc-k8-users
         ports:
         - containerPort: 8001
