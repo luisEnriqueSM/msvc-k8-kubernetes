@@ -57,3 +57,13 @@ kubectl expose deployment msvc-k8-users --port=8001 --type=LoadBalancer
 ```bash
 minikube service msvc-k8-users --url
 ```
+
+### Actualizar Imagen del contenedor msvc-k8-users
+```bash
+kubectl set image deployment msvc-k8-users msvc-k8-users=luisenriquesm/msvc-k8-users:v4
+```
+
+### Escalando instancias de pod con replicas
+```bash
+kubectl scale deployment msvc-k8-users --replicas=3
+```
