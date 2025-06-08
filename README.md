@@ -1,7 +1,10 @@
 
 # Comandos para crear los deployments en Kubernetes
 
-
+## Abrir Kubernetes Dashboard
+```bash
+minikube dashboard
+```
 
 ## Microservicio: mysql8
 
@@ -35,7 +38,7 @@ kubectl expose deployment mysql8 --port=3306 --type=ClusterIP
 kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v4 --port=8001 --dry-run=client -o yaml > deployment-users.yaml
 ```
 
-### Ejecutar el deployment de forma declarativa al llamar el archivo:
+### Ejecutar o actualizar el deployment de forma declarativa al llamar el archivo:
 ```bash
 kubectl apply -f deployment-users.yaml
 ```
@@ -66,4 +69,14 @@ kubectl set image deployment msvc-k8-users msvc-k8-users=luisenriquesm/msvc-k8-u
 ### Escalando instancias de pod con replicas
 ```bash
 kubectl scale deployment msvc-k8-users --replicas=3
+```
+
+### Eliminar deployment
+```bash
+kubectl delete deployment msvc-k8-users
+```
+
+### Elinar deployment basado en archivo yaml
+```bash
+kubectl delete -f deployment-users.yaml
 ```
