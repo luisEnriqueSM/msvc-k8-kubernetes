@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: msvc-k8-users
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: msvc-k8-users
