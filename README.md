@@ -19,6 +19,8 @@ kubectl create deployment mysql8 --image=mysql:8.0.42 --port=3306 --dry-run=clie
 kubectl apply -f deployment-mysql.yaml
 ```
 
+
+
 ### Forma imperativa
 
 ### Crear deployment
