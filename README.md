@@ -19,8 +19,6 @@ kubectl create deployment mysql8 --image=mysql:8.0.42 --port=3306 --dry-run=clie
 kubectl apply -f deployment-mysql.yaml
 ```
 
-
-
 ### Forma imperativa
 
 ### Crear deployment
@@ -45,6 +43,10 @@ kubectl create deployment msvc-k8-users --image=luisenriquesm/msvc-k8-users:v4 -
 kubectl apply -f deployment-users.yaml
 ```
 
+### Reiniciar el deployment
+```bash
+kubectl rollout restart deployment msvc-k8-users
+```
 
 ## Forma imperativa
 
