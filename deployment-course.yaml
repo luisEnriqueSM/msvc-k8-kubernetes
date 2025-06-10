@@ -19,14 +19,32 @@ spec:
         - containerPort: 8002
         env:
           - name: PORT
-            value: "8002"
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-courses
+                key: port
           - name: DB_HOST
-            value: postgres-container:5432
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-courses
+                key: db_host
           - name: DB_DATABASE
-            value: msvc-k8-courses
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-courses
+                key: database
           - name: DB_USERNAME
-            value: postgres
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-courses
+                key: username
           - name: DB_PASSWORD
-            value: sasa
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-courses
+                key: password
           - name: USERS_URL
-            value: msvc-k8-users:8001
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-courses
+                key: users_url
