@@ -6,6 +6,6 @@ data:
   port: "8001"
   db_host: mysql8:3306
   database: msvc_k8_users
-  username: root
-  password: sasa1234
+  #username: root
+  #password: sasa1234
   courses_url: msvc-k8-courses:8002

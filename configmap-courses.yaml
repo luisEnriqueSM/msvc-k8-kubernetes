@@ -6,6 +6,6 @@ data:
   port: "8002"
   db_host: postgres-container:5432
   database: msvc-k8-courses
-  username: postgres
-  password: sasa
+  #username: postgres
+  #password: sasa
   users_url: msvc-k8-users:8001

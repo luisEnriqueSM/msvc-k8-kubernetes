@@ -99,3 +99,8 @@ kubectl get pv
 ```bash
 kubectl get pvc
 ```
+
+### Obtener Secrets
+```bash
+kubectl get secret
+```

@@ -20,12 +20,12 @@ spec:
           env:
             - name: POSTGRES_USER
               valueFrom:
-                configMapKeyRef:
+                secretKeyRef:
                   name: msvc-k8-courses
                   key: username
             - name: POSTGRES_PASSWORD
               valueFrom:
-                configMapKeyRef:
+                secretKeyRef:
                   name: msvc-k8-courses
                   key: password
             - name: POSTGRES_DB
