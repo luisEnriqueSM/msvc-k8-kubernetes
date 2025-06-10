@@ -84,3 +84,18 @@ kubectl delete deployment msvc-k8-users
 ```bash
 kubectl delete -f deployment-users.yaml
 ```
+
+### Obtener el storage class
+```bash
+kubectl get sc
+```
+
+### Obtener PersistentVolume
+```bash
+kubectl get pv
+```
+
+### Obtener PersistentVolumeClaim
+```bash
+kubectl get pvc
+```
