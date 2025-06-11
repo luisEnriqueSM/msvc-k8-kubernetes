@@ -104,3 +104,8 @@ kubectl get pvc
 ```bash
 kubectl get secret
 ```
+
+### Obtener permisos de clusterrolebinding para comunicación entre pods 
+```bash
+kubectl create clusterrolebinding admin --clusterrole=cluster-admin --serviceaccount=default:default
+```

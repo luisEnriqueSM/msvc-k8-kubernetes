@@ -13,7 +13,7 @@ spec:
         app: msvc-k8-courses
     spec:
       containers:
-      - image: luisenriquesm/msvc-k8-courses:v1
+      - image: luisenriquesm/msvc-k8-courses:v3
         name: msvc-k8-courses
         ports:
         - containerPort: 8002
