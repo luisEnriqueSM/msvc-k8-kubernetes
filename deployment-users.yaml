@@ -57,3 +57,9 @@ spec:
               configMapKeyRef:
                 name: msvc-k8-users
                 key: courses_url
+          - name: ENVIRONMENT
+            valueFrom:
+              configMapKeyRef:
+                name: msvc-k8-users
+                key: environment
+

@@ -9,6 +9,21 @@ data:
   #username: root
   #password: sasa1234
   courses_url: msvc-k8-courses:8002
+  environment: prod
   msvc-k8-users.yaml: |-
     config:
       texto: Configurando ambiente por defecto
+    ---
+    spring:
+      config:
+        activate:
+          on-profile: dev
+    config:
+      texto: Configurando ambiente de Desarrollo
+    ---
+    spring:
+      config:
+        activate:
+          on-profile: prod
+    config:
+      texto: Configurando ambiente de Produccion
