@@ -9,3 +9,6 @@ data:
   #username: root
   #password: sasa1234
   courses_url: msvc-k8-courses:8002
+  msvc-k8-users.yaml: |-
+    config:
+      texto: Configurando ambiente por defecto
