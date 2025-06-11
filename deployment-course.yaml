@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: msvc-k8-courses
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: msvc-k8-courses
@@ -62,3 +62,19 @@ spec:
               configMapKeyRef:
                 name: msvc-k8-courses
                 key: environment
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8002
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8002
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 20
+          timeoutSeconds: 5  
