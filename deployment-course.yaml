@@ -60,5 +60,5 @@ spec:
           - name: ENVIRONMENT
             valueFrom:
               configMapKeyRef:
-                name: msvc-k8-users
+                name: msvc-k8-courses
                 key: environment
