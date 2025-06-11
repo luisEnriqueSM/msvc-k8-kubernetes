@@ -67,15 +67,15 @@ spec:
             path: /actuator/health/readiness
             port: 8001
             scheme: HTTP
-          initialDelaySeconds: 5
-          periodSeconds: 20
-          timeoutSeconds: 10
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
         livenessProbe:
           httpGet:
             path: /actuator/health/liveness
             port: 8001
             scheme: HTTP
-          initialDelaySeconds: 10
-          periodSeconds: 30
-          timeoutSeconds: 10
+          initialDelaySeconds: 30
+          periodSeconds: 20
+          timeoutSeconds: 5
 
