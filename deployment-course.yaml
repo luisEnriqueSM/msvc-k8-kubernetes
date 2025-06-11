@@ -77,4 +77,11 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 30
           periodSeconds: 20
-          timeoutSeconds: 5  
+          timeoutSeconds: 5
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "400Mi"
+            cpu: "350m"  
