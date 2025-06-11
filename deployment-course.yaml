@@ -15,6 +15,7 @@ spec:
       containers:
       - image: luisenriquesm/msvc-k8-courses:v3
         name: msvc-k8-courses
+        imagePullPolicy: Always
         ports:
         - containerPort: 8002
         env:

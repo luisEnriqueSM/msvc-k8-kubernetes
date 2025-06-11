@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: msvc-k8-users
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: msvc-k8-users
@@ -14,10 +14,19 @@ spec:
     spec:
       containers:
       - image: luisenriquesm/msvc-k8-users:v5
+        imagePullPolicy: Always
         name: msvc-k8-users
         ports:
         - containerPort: 8001
         env:
+          - name: MY_POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: MY_POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
           - name: PORT
             valueFrom:
               configMapKeyRef:
