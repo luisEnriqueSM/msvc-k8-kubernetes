@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-k8-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  msvc-k8-gateway
+  template:
+    metadata:
+      labels:
+        app: msvc-k8-gateway
+    spec:
+      containers:
+      - image: luisenriquesm/msvc-k8-gateway:v1
+        name: msvc-k8-gateway
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8090
