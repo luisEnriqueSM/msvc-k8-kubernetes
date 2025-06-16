@@ -1,6 +1,11 @@
 
 # Comandos para crear los deployments en Kubernetes
 
+## Iniciar Minikube con Docker
+```bash
+minikube start --driver=docker
+```
+
 ## Abrir Kubernetes Dashboard
 ```bash
 minikube dashboard
