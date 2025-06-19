@@ -9,7 +9,7 @@ data:
   #username: postgres
   #password: sasa
   users_url: msvc-k8-users:8001
-  environment: dev
+  environment: prod
   msvc-k8-courses.yaml: |-
     config:
       texto: Configurando ambiente por defecto

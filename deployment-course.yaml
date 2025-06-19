@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: msvc-k8-courses
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: msvc-k8-courses
